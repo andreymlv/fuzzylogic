@@ -6,13 +6,22 @@
 
 pip install matplotlib
 
+Для запуска программы необходимо ввести в CMD команду (только после установки Python и библиотеки):
+
+python main.py
+
+
+Авторы - Andrey&Sava
 """
+
 # используем библиотеку для графиков
 import matplotlib.pyplot as plt
 # используем наш модуль для функций принадлежности
 import figures as fg
 
 # Главная функия
+
+
 def main():
     """
     args - значения для функции принадлежности.
@@ -48,9 +57,10 @@ def main():
             coords[0][j] += ((triangles[i].upper - triangles[i].lower)/2)*i
         # добавляем подграфик в основной график
         triangles[i].make_plot(coords[0], coords[1], ax)
-    
+
     # Показываем график
     plt.show()
+
 
 # если файл хранит в себе главную функцию main, то выполняем эту функцию
 if __name__ == "__main__":
