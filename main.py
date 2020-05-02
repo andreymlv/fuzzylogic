@@ -29,10 +29,13 @@ def main():
     # иницилизация для графиков
     fig, ax = plt.subplots()
 
-    # 
+    # этот цикл заполняет список 'x' и сзаполняет список треугольников с пользовательским параметром
     for i in range(int(input("Enter number of X's => "))):
+        # x_current - хранит в себе текущее пользовательское значение параметра
         x_current = float(input("Enter x => "))
+        # добавляем в список 'x' <- x_current
         x.append(x_current)
+        # добавляет в список 'triangles' <- наш треугольник со значениями для функции принадлежности
         triangles.append(fg.Triangle(*args, x[i]))
 
     for i in range(len(triangles)):
@@ -41,6 +44,7 @@ def main():
 
         # Добавляем шаг для каждого подграфика
         for j in range(len(coords[0])):
+            # данная операция делает слияние "напополам" с графиками
             coords[0][j] += ((triangles[i].upper - triangles[i].lower)/2)*i
         # добавляем подграфик в основной график
         triangles[i].make_plot(coords[0], coords[1], ax)
@@ -48,6 +52,6 @@ def main():
     # Показываем график
     plt.show()
 
-
+# если файл хранит в себе главную функцию main, то выполняем эту функцию
 if __name__ == "__main__":
     main()
