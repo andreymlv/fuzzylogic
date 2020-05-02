@@ -70,6 +70,7 @@ class Trapezoid():
         self.u = self.mftrapezoid()
 
     def mftrapezoid(self):
+        """Функция принадлежности"""
         u = 0
         if ((self.x >= self.lower) and (self.x <= self.first_peak)):
             u = 1 - ((self.first_peak - self.x) /
