@@ -28,8 +28,10 @@ class Triangle():
         self.u = self.mftriangle()
 
     def mftriangle(self):
-        # нахождение степени нечёткого равенства методом треугольника, по стационарной формуле
-        return max(min(((self.x-self.lower)/(self.peak-self.lower)), ((self.upper-self.x)/(self.upper-self.peak))), 0)
+        # нахождение степени нечёткого равенства методом треугольника,
+        # по стационарной формуле
+        return max(min(((self.x-self.lower)/(self.peak-self.lower)),
+                       ((self.upper-self.x)/(self.upper-self.peak))), 0)
 
     def get_coords(self):
         """
@@ -86,20 +88,10 @@ class Trapezoid():
         self.u = self.mftrapezoid()
 
     def mftrapezoid(self):
-        # нахождение степени нечёткого равенства методом трапеции, по стационарной формуле
-        u = 0
-        if ((self.x >= self.lower) and (self.x <= self.first_peak)):
-            u = 1 - ((self.first_peak - self.x) /
-                     (self.first_peak - self.lower))
-            return u
-        if (self.x >= self.first_peak) and (self.x <= self.second_peak):
-            u = 1
-            return u
-        if ((self.x >= self.second_peak) and (self.x <= self.upper)):
-            u = 1 - ((self.x - self.second_peak) /
-                     (self.upper - self.second_peak))
-            return u
-        return u
+        # нахождение степени нечёткого равенства методом трапеции,
+        # по стационарной формуле
+        return max(min(((self.x-self.lower)/(self.first_peak-self.lower)), 1,
+                       ((self.upper-self.x)/(self.upper-self.second_peak))), 0)
 
     def get_coords(self):
         """
@@ -108,7 +100,8 @@ class Trapezoid():
         """
         # выводим степень нечёткого равенства
         print(self.u)
-        # сортируем значения коопдинат, для рисования правильной функции
+        # сортируем значения коопдинат,
+        # для рисования правильной функции
         x_list = sorted([self.lower, self.lower+self.upper -
                          self.x, self.x, self.upper])
         y_list = [0, self.u, self.u, 0]
