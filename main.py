@@ -29,8 +29,10 @@ def main():
 
     [<MINIMAL_VALUE>, <MAXIMAL_VALUE>, <PEAK_VALUE>]
     """
-    args = [2, 10, 6]
-    # x - хранит в себе список значений параметра, степень нечёткого равенства мы вычисляем
+    args = list()
+    for i in range(3):
+        args.append(int(input("Enter " + str(i+1) + " value => ")))
+    # x - хранит в себе список значений параметра, степень нечёткого равенства которого мы вычисляем
     x = list()
     # triangles - хранит в себе список объектов "треугольников"
     triangles = list()

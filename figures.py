@@ -22,21 +22,14 @@ class Triangle():
         """
         self.lower = lower
         self.upper = upper
-        self. peak = peak
+        self.peak = peak
         self.x = x
         # степень нечёткого равенства треугольника
         self.u = self.mftriangle()
 
     def mftriangle(self):
         # нахождение степени нечёткого равенства методом треугольника, по стационарной формуле
-        u = 0
-        if ((self.x >= self.lower) and (self.x <= self.peak)):
-            u = 1 - ((self.peak - self.x) / (self.peak - self.lower))
-            return u
-        if ((self.x >= self.peak) and (self.x <= self.upper)):
-            u = 1 - ((self.x - self.peak) / (self.upper - self.peak))
-            return u
-        return u
+        return max(min(((self.x-self.lower)/(self.peak-self.lower)), ((self.upper-self.x)/(self.upper-self.peak))), 0)
 
     def get_coords(self):
         """
