@@ -14,7 +14,7 @@ class Triangle():
 
     def __init__(self, lower, upper, peak, x):
         """
-        Иницилизация объекта
+        Инициализация объекта
         lower - минимальное значение параметра
         upper - максимальное значение параметра
         peak - среднее значение параметра
@@ -45,7 +45,7 @@ class Triangle():
         координат для нарисования графика параметра
         """
         if (self.u != 1.0):
-            # сортируем значения коопдинат, для рисования правильной функции
+            # сортируем значения координат, для рисования правильной функции
             x_list = sorted(
                 [self.lower, self.lower+self.upper-self.x, self.x, self.upper])
             y_list = [0, self.u, self.u, 0]
@@ -72,7 +72,7 @@ class Trapezoid():
 
     def __init__(self, lower, upper, first_peak, second_peak, x):
         """
-         Иницилизация объекта
+         Инициализация объекта
          lower - минимальное значение параметра
          upper - максимальное значение параметра
          first_peak - 1-ое среднее значение параметра
@@ -100,7 +100,7 @@ class Trapezoid():
         """
         # выводим степень нечёткого равенства
         print(self.u)
-        # сортируем значения коопдинат,
+        # сортируем значения координат,
         # для рисования правильной функции
         x_list = sorted([self.lower, self.lower+self.upper -
                          self.x, self.x, self.upper])
