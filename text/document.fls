@@ -84,6 +84,8 @@ INPUT c:/texlive/2020/texmf-dist/tex/latex/amsfonts/euscript.sty
 INPUT c:/texlive/2020/texmf-dist/tex/latex/amsfonts/euscript.sty
 INPUT c:/texlive/2020/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 INPUT c:/texlive/2020/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+INPUT c:/texlive/2020/texmf-dist/tex/latex/tools/indentfirst.sty
+INPUT c:/texlive/2020/texmf-dist/tex/latex/tools/indentfirst.sty
 INPUT c:/texlive/2020/texmf-dist/tex/latex/tocbibind/tocbibind.sty
 INPUT c:/texlive/2020/texmf-dist/tex/latex/tocbibind/tocbibind.sty
 INPUT c:/texlive/2020/texmf-dist/tex/latex/listings/listings.sty
@@ -167,16 +169,9 @@ INPUT c:/Users/АндрейМалов/.texlive2020/texmf-var/fonts/tfm/lh/lh-t2a
 INPUT c:/Users/АндрейМалов/Documents/projects/fuzzylogic/text/images/temp_example.jpg
 INPUT c:/Users/АндрейМалов/Documents/projects/fuzzylogic/text/images/temp_example.jpg
 INPUT c:/Users/АндрейМалов/Documents/projects/fuzzylogic/text/images/temp_example.jpg
-INPUT c:/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
-INPUT c:/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
-INPUT c:/Users/АндрейМалов/Documents/projects/fuzzylogic/text/../main.py
-INPUT c:/Users/АндрейМалов/Documents/projects/fuzzylogic/text/../main.py
-INPUT c:/Users/АндрейМалов/Documents/projects/fuzzylogic/text/../main.py
-INPUT c:/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm
 INPUT c:/Users/АндрейМалов/Documents/projects/fuzzylogic/text/document.bbl
 INPUT c:/Users/АндрейМалов/Documents/projects/fuzzylogic/text/document.bbl
 INPUT c:/Users/АндрейМалов/Documents/projects/fuzzylogic/text/document.aux
-INPUT c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc
 INPUT c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb

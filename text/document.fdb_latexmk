@@ -1,11 +1,9 @@
 # Fdb version 3
-["pdflatex"] 1588380560 "c:/Users/АндрейМалов/Documents/projects/fuzzylogic/text/document.tex" "c:/Users/АндрейМалов/Documents/projects/fuzzylogic/text/document.pdf" "document" 1588380579
-  "c:/Users/АндрейМалов/Documents/projects/fuzzylogic/text/document.aux" 1588380562 2847 29a80a2df490e5f6e3c2f778b0084853 ""
-  "c:/Users/АндрейМалов/Documents/projects/fuzzylogic/text/document.tex" 1588380548 25870 e3a3906240d9c1feeaa446fdf9940a33 ""
+["pdflatex"] 1588754990 "c:/Users/АндрейМалов/Documents/projects/fuzzylogic/text/document.tex" "c:/Users/АндрейМалов/Documents/projects/fuzzylogic/text/document.pdf" "document" 1588754992
+  "c:/Users/АндрейМалов/Documents/projects/fuzzylogic/text/document.aux" 1588754991 2713 0728b488b2987a6ac0436a70cbbbc77c ""
+  "c:/Users/АндрейМалов/Documents/projects/fuzzylogic/text/document.tex" 1588754938 25797 3e5117a729b7cb0fb23d8ec85b0b527c ""
   "c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc" 1588368199 3141 82d5616418ed8d5de703b3951bedecb4 ""
-  "c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1588368199 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1588369679 3524 cb3e574dea2d1052e39280babc910dc8 ""
-  "c:/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1588369195 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "c:/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1588367214 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1588367214 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "c:/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1588367215 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -83,7 +81,6 @@
   "c:/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg" 1588371230 678 4792914a8f45be57bb98413425e4c7af ""
   "c:/texlive/2020/texmf-dist/tex/latex/listings/listings.cfg" 1588371564 1830 e31effa752c61538383451ae21332364 ""
   "c:/texlive/2020/texmf-dist/tex/latex/listings/listings.sty" 1588371564 80964 64e57373f36316e4a09b517cbf1aba2e ""
-  "c:/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty" 1588371564 204271 bae5b2d457283e99567249c1990510be ""
   "c:/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty" 1588371564 77022 ee25ce086f4a79d8cf73bac6f94c02a5 ""
   "c:/texlive/2020/texmf-dist/tex/latex/mathtools/mathtools.sty" 1588371916 55731 4347f70fb23a75dbacb3c5fd21dd2675 ""
   "c:/texlive/2020/texmf-dist/tex/latex/mathtools/mhsetup.sty" 1588371916 5437 39f2bba90502a381bd48d78339c1a5f0 ""
@@ -92,11 +89,12 @@
   "c:/texlive/2020/texmf-dist/tex/latex/mmap/omx.cmap" 1588372075 3001 252c8ca42b06a22cb1a11c0e47790c6e ""
   "c:/texlive/2020/texmf-dist/tex/latex/tocbibind/tocbibind.sty" 1588374522 8927 46f54e33fc9cef24f78ab3bc811cb63f ""
   "c:/texlive/2020/texmf-dist/tex/latex/tools/calc.sty" 1588374531 10216 5efd55f2010055e7b7875afd6a75be82 ""
+  "c:/texlive/2020/texmf-dist/tex/latex/tools/indentfirst.sty" 1588374531 1619 d4cd7231755dd1dfa89af8ceddfb0e4d ""
   "c:/texlive/2020/texmf-dist/tex/latex/was/icomma.sty" 1588375208 1018 df058db1896806f044e2233bb506d425 ""
   "c:/texlive/2020/texmf-dist/web2c/texmf.cnf" 1588370898 39451 60d7debd9ef8ece44cbe965493576c2d ""
   "c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1588375723 4852750 67cfae5f2b9d7f6f56ba79641f1314e2 ""
   "c:/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1588375979 2420238 95a7fc54a713ab1d8242ed20ef141346 ""
   "c:/texlive/2020/texmf.cnf" 1588375603 673 4ae7b2f49cee444c5343a45b5d0f169c ""
   (generated)
-  "c:/Users/АндрейМалов/Documents/projects/fuzzylogic/text/document.log"
   "c:/Users/АндрейМалов/Documents/projects/fuzzylogic/text/document.pdf"
+  "c:/Users/АндрейМалов/Documents/projects/fuzzylogic/text/document.log"
