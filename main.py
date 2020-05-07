@@ -84,8 +84,6 @@ def main():
                                                                     float(input("Enter c = "))))
             else:
                 print("Error")
-    
-    print(set(entrances[0][1]) & set(exits[0][1]))
     """
 
     # Вход №1 Сервис
@@ -102,7 +100,7 @@ def main():
            FuzzySet("average").trimf(x, 10, 15, 20),
            FuzzySet("generous").trimf(x, 20, 25, 30)]
 
-    # rules - лингвистические переменные (в данном случае находим степень нечётного равентва)
+    # rules - лингвистические переменные (в данном случае находим степень нечёткого равентва)
     rules = list()
     rules.append((set(service[0]) | set(food[0])) & set(tip[0]))
     rules.append((set(service[1])) & set(tip[1]))
