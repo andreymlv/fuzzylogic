@@ -1,6 +1,7 @@
 
 from figures import FuzzySet
 
+
 def main():
     """
     1. number of inputs/outputs
@@ -19,7 +20,7 @@ def main():
 
     4. print charts and some info
     """
-    
+
     # i - счётчик
     i = 0
     # n - максимальный диапазон
@@ -31,12 +32,12 @@ def main():
     entrances = list()
     exits = list()
     """
-    
+
     # Заполнение x значениями
     while len(x) <= n*10:
         x.append(i)
         i += 0.1
-    
+
     """
     for i in range(int(input("How many entrances = "))):
         entrances.append(list())  # 3
@@ -86,12 +87,12 @@ def main():
     
     print(set(entrances[0][1]) & set(exits[0][1]))
     """
-    
+
     # Вход №1 Сервис
     service = [FuzzySet("poor").gaussmf(x, 1, 0.5),
                FuzzySet("good").gaussmf(x, 2, 5),
                FuzzySet("excellent").gaussmf(x, 1, 9.5)]
-    
+
     # Вход №2 Еда
     food = [FuzzySet("rancid").trapmf(x, 0, 0, 1, 3),
             FuzzySet("delicious").trapmf(x, 7, 8, 10, 10)]
@@ -124,7 +125,6 @@ def main():
     print()
     print()
     print(rules)
-    
 
 
 if __name__ == "__main__":
