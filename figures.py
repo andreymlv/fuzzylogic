@@ -1,117 +1,135 @@
-"""
-Этот файл хранит в себе классы функций принадлежности
+
+from math import e
+from math import pow
+from math import sqrt
 
 
-Авторы - Andrey&Sava
-"""
-
-
-class Triangle():
-    """
-    Этот класс используется для нахождения степени нечёткого равенства 
-    методом треугольника
-    """
-
-    def __init__(self, lower, upper, peak, x):
+class FuzzySet():
+    def __init__(self, name):
         """
-        Инициализация объекта
-        lower - минимальное значение параметра
-        upper - максимальное значение параметра
-        peak - среднее значение параметра
-        x - значение параметра заданное пользователем
+        name - название множества входа/выхода
         """
-        self.lower = lower
-        self.upper = upper
-        self.peak = peak
-        self.x = x
-        # степень нечёткого равенства треугольника
-        self.u = self.mftriangle()
+        self.name = name
 
-    def mftriangle(self):
-        # нахождение степени нечёткого равенства методом треугольника,
-        # по стационарной формуле
-        return max(min(((self.x-self.lower)/(self.peak-self.lower)),
-                       ((self.upper-self.x)/(self.upper-self.peak))), 0)
-
-    def get_coords(self):
+    def trapmf(self, x, a, b, c, d):
         """
-        Функция генерирования координат на основе найденой 
-        степени нечёткого равенства
+        Трапециевидная функция принадлежности
         """
-        # выводим степень нечёткого равенства
-        print(self.u)
+        result = list()
+
+        for n in x:
+            if (n < a) or (n > d):
+                continue
+            if b == a:
+                b += 0.1
+            elif d == c:
+                c -= 0.1
+            u = max(min((n-a)/(b-a), 1, (d-n)/(d-c)), 0)
+            result.append(u)
+
+        return result
+
+    def trimf(self, x, a, b, c):
         """
-        здесь в зависимости от полученной степени нечёткого равенства происходит выбор
-        координат для нарисования графика параметра
+        Треугольная функция принадлежности
         """
-        if (self.u != 1.0):
-            # сортируем значения координат, для рисования правильной функции
-            x_list = sorted(
-                [self.lower, self.lower+self.upper-self.x, self.x, self.upper])
-            y_list = [0, self.u, self.u, 0]
-        else:
-            x_list = sorted([self.lower, self.x, self.upper])
-            y_list = [0, self.u, 0]
-       # список, который хранит в себе значения координат функции
-        coords = list()
-        coords.append(x_list)
-        coords.append(y_list)
+        result = list()
 
-        return coords
+        for n in x:
+            if (n < a) or (n > c):
+                continue
+            if b == a:
+                b += 0.1
+            elif c == b:
+                b -= 0.1
+            u = max(min((n-a)/(b-a), (c-n)/(c-b)), 0)
+            result.append(u)
 
-    def make_plot(self, ox, oy, ax):
-        """Создание графика нечёткого равенства"""
-        ax.plot(sorted(ox), oy)
+        return result
 
-
-class Trapezoid():
-    """
-    Этот класс используется для нахождения степени нечёткого равенства 
-    методом трапеции
-    """
-
-    def __init__(self, lower, upper, first_peak, second_peak, x):
+    def gaussmf(self, x, p, c):
         """
-         Инициализация объекта
-         lower - минимальное значение параметра
-         upper - максимальное значение параметра
-         first_peak - 1-ое среднее значение параметра
-         second_peak - 2-ое среднее значение параметра
-         x - значение параметра заданное пользователем
-         """
-        self.lower = lower
-        self.upper = upper
-        self.first_peak = first_peak
-        self.second_peak = second_peak
-        self.x = x
-        # степень нечёткого равенства трапеции
-        self.u = self.mftrapezoid()
-
-    def mftrapezoid(self):
-        # нахождение степени нечёткого равенства методом трапеции,
-        # по стационарной формуле
-        return max(min(((self.x-self.lower)/(self.first_peak-self.lower)), 1,
-                       ((self.upper-self.x)/(self.upper-self.second_peak))), 0)
-
-    def get_coords(self):
+        Гауссовская функция принадлежности
         """
-        Функция генерирования координат на основе найденой 
-        степени нечёткого равенства
+        result = list()
+
+        for n in x:
+            if (pow(e, -pow((n-c), 2)/(2*pow(p, 2))) == 0):
+                continue
+            u = pow(e, -pow((n-c), 2)/(2*pow(p, 2)))
+            result.append(u)
+        return result
+
+    def negation(self, fuzzy_set):
         """
-        # выводим степень нечёткого равенства
-        print(self.u)
-        # сортируем значения координат,
-        # для рисования правильной функции
-        x_list = sorted([self.lower, self.lower+self.upper -
-                         self.x, self.x, self.upper])
-        y_list = [0, self.u, self.u, 0]
-        # список, который хранит в себе значения координат функции
-        coords = list()
-        coords.append(x_list)
-        coords.append(y_list)
+        !A
+        """
+        result = list()
 
-        return coords
+        for i in fuzzy_set:
+            result.append(1-i)
 
-    def make_plot(self, ox, oy, ax):
-        """Создание графика нечёткого равенства"""
-        ax.plot(sorted(ox), oy)
+        return result
+
+    def conjugation(self, fuzzy_set1, fuzzy_set2):
+        """
+        Конъюнкция
+        A^B (AND)
+        """
+        return min(fuzzy_set1, fuzzy_set2)
+
+    def disjunction(self, fuzzy_set1, fuzzy_set2):
+        """
+        Дизъюнкция
+        AvB (OR)
+        """
+        return max(fuzzy_set1, fuzzy_set2)
+
+    def concentrasion(self, fuzzy_set):
+        """
+        Концентрация
+        A^2
+        """
+        result = list()
+
+        for i in fuzzy_set:
+            result.append(pow(i, 2))
+
+        return result
+
+    def dilatation(self, fuzzy_set):
+        """
+        Дилатация
+        sqrt(A)
+        """
+        result = list()
+
+        for i in fuzzy_set:
+            result.append(sqrt(i))
+
+        return result
+
+    def activation(self, fuzzy_set, func, args):
+        """
+        Активация
+        """
+        result = list()
+        u = func(*args)
+
+        result.append(min(fuzzy_set, u))
+        result.append(args[1])
+        result.append(args[2])
+
+        return result
+
+    def accumulation(self, a1, a2):
+        """
+        Активация
+        """
+        return a1 if a1[0] > a2[0] else a2
+
+    def __str__(self):
+        """
+        Если объект строка, то возвращать имя множества
+        """
+        return self.name
